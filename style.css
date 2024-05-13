@@ -245,8 +245,44 @@ main section .underline{
     text-decoration: none;
     font-weight: 700;
 }
-
 /* final section our services */
+/* inicio section about us */
+#aboutus .flex{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+#aboutus h3{
+    font-weight: 700;
+    margin: var(--gap) 0;
+    font-size: 1.15rem;
+}
+#aboutus h4{
+    color: var(--colorprincipal);
+    font-size: 1.07rem;
+}
+#aboutus p{
+    color: #777;
+    line-height: 1.3;
+}
+#aboutus .marco{
+    border: 0.1875rem solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    width: 90%;
+    margin: 0 auto;
+    transition: 1s;
+    & img{
+        transform: rotateZ(-10deg);
+        transition: 1s;
+    }
+}
+
+#aboutus figure:hover .marco, #aboutus figure:hover img{ /* #aboutus figure:hover :is(.marco, img){ para no tener que repetir las parte comunes*/
+    transform: rotateZ(0deg);
+
+}
+/* fin section about us */
+
 
 /* inicio media queries */
 @media(width>=37.5rem){
@@ -260,6 +296,9 @@ main section .underline{
         padding: 1.25rem;
         border-bottom: 0;
         border-left: 1px solid #aaa;
+    }
+    #aboutus .flex{
+        flex-direction: row;
     }
 
 }
