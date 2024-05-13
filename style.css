@@ -5,3 +5,43 @@
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 
+/* inicio layout generales */
+html{
+    scroll-behavior: smooth;
+    /* puntos de ancla animados para subir o bajar con suavidad */
+}
+
+:root{
+    --fuenteprincipal: "montserrat", sans-serif;
+    --fuentetitulos: "handlee" cursive;
+    --colorprincipal: #fa573a;
+    --colorsecundario: #21242e; /* color de fondo del menu */
+    --fontsize: 1em;
+    --anchomaximo: 68,75rem;
+    --gap: 1rem;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container{
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+    /* hay que hacer un padding lateral sobretodo para movil */
+}
+
+body{
+    font-family: var(--fuenteprincipal);
+    font-size: var(--fontsize);
+}
+/* inicio header */
+header{
+
+}
+/* fin de header */
+
+
+/* fin layout generales */
