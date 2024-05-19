@@ -339,6 +339,16 @@ section{
 }
 /* fin del our blogs */
 
+/* inicio menu */
+#menu{
+    background-color: var(--colorsecundario);
+}
+
+
+/* fin del menu */
+
+
+
 /* inicio media queries */
 @media(width>=37.5rem){
     #ourservices .grid{
