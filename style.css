@@ -37,6 +37,7 @@ img{
 body{
     font-family: var(--fuenteprincipal);
     font-size: var(--fontsize);
+    height: 100vh;
 }
 /* inicio header */
 header .nav-top {
@@ -343,6 +344,7 @@ section{
 #menu {
     padding: 1.25rem 0;
     background-color: var(--colorsecundario);
+    height: 100%;
     & h3{
         color: white;
         margin: var(--gap) 0;
@@ -372,6 +374,9 @@ section{
         margin: 40px;
         color: var(--colorprincipal);
     }
+    & article:last-child{
+        margin-bottom:2.5rem;  
+      }
    
 }
 
@@ -425,7 +430,7 @@ section{
         flex-direction: row;
     }
   #blog .grid{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
 
     } 
     #blog .grid article:last-child{
@@ -436,7 +441,8 @@ section{
         padding: 1.25rem;
         border-bottom: 0;
     }
-    
+   
+
 }
 @media(width>=48rem) {
     header .nav-top .container{
@@ -466,8 +472,58 @@ section{
      #blog .grid article:last-child{
         grid-column: 3/4;
     }
+    #menu .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+   #menu .grid .platos{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    width: 80vh;
+    left: 45vh;
+    padding: 10px;
+    & article:nth-child(2){
+        margin-top: -40px;
+    }
+    & article:last-child{
+    margin-top: -40px;
+    }
+    & figure{
+        width: 20vh;
+    
+    }
+    & h3{
+        font-size: 1rem;
+        position: relative;
+       left: 200px;
+       top:-120px;
+    }
+    & p{
+        font-size: 0.8rem;
+        position:relative;
+        left: 200px;
+        top: -120px
+    }
+    & a{
+        position:relative;
+        left: 200px;
+        top: -120px;
+    }
+    
+   }
+   #menu .grid .sidebar{
+    display: grid;
+    position: absolute;
+    width: 20%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    & aside:last-child{
+        margin-top: 5.625rem;
+    }
+   }
+
   }
-    /* revisar esta parte para que el ultimo article ocupe 2 espacios */
+   
     
 
 @media(width >=62.75rem) {
@@ -488,6 +544,7 @@ section{
         border:0px;
         padding: 0rem 0rem 0rem 2.50rem;
     }
+   
 }
 /* fin media queries */
 /* fin layout generales */
